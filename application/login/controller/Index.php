@@ -2,9 +2,9 @@
 
 namespace app\login\controller;
 
-use think\controller\Rest;
+use app\index\controller\Api;
 
-class Index extends Rest
+class Index extends Api
 {
     public function index()
     {
@@ -13,7 +13,10 @@ class Index extends Rest
 
     public function checkPassword()
     {
-       echo input('name');die;
-        return json(['ss' => '11'], 200);
+        $name = input('name');
+        if (empty($name)) {
+//            return json('', 200);
+        }
+        return json(['name' => $name], 200);
     }
 }

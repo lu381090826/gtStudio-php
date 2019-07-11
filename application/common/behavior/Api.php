@@ -3,7 +3,7 @@ namespace app\index\controller;
 
 class Api
 {
-    public function index()
+    public function _con()
     {
         return '';
     }
