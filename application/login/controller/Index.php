@@ -13,6 +13,7 @@ class Index extends Api
 
     public function checkPassword()
     {
+        echo 100;die;
         $name = input('name');
         if (empty($name)) {
 //            return json('', 200);
